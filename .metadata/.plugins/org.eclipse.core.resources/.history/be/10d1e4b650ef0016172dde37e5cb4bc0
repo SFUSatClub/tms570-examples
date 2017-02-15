@@ -1,0 +1,61 @@
+/*
+ * SFU_Serial.cpp
+ *
+ *  Created on: Feb 8, 2017
+ *      Author: Richard Arthurs
+ */
+
+
+
+#include "SFU_Serial.h"
+#include <string.h>
+#include <stdlib.h>
+
+void serialInit(){
+	sciInit(); //initialize the SCI driver
+	bufferIndex = 0;
+	sciReceive(scilinREG, 1, (unsigned char *)&myCommand); // place into receive mode
+}
+
+void serialSend(unsigned char* myStr){
+
+	sciSend(scilinREG, sizeof(myStr) + 1, myStr);
+
+}
+
+void serialSendln(char* stringToSend){
+	const char append[2] = "\r\n";
+
+	char* extended;
+	extended = malloc(strlen(stringToSend)+1+2); // enough to hold everything. 1 captures the null string terminator
+	strcpy(extended, stringToSend);
+	strcat(extended, append);
+	int stringLength = strlen(extended) + 1;
+	sciSend(scilinREG, stringLength, (unsigned char *) extended); // does not like strlen + 1 to be inlined, but works fine when broken out to another var
+
+	free(extended);
+
+	//sciReceive(scilinREG, 1, (unsigned char *)&inputBuffer + bufferIndex); // place into receive mode
+	sciReceive(scilinREG, 1, (unsigned char *)&myCommand);
+}
+
+void sciNotification(sciBASE_t *sci, unsigned flags){ // this is the interrupt handler
+	//sciSend(sci, 1, (unsigned char *)&command); // echo received character
+	//sciSend(sci, 3, (unsigned char *)"t\r\n");
+	inputBuffer[bufferIndex] = myCommand;
+
+//	sciReceive(scilinREG, 1, (unsigned char *)&inputBuffer + bufferIndex); // await next character
+	sciSend(scilinREG, 1, (unsigned char *)&inputBuffer[bufferIndex]); // echo received character
+	bufferIndex ++;
+
+	if (bufferIndex > 9){ // reset the buffer
+		bufferIndex = 0;
+		serialSendln("\r\nBuffer full");
+	}
+
+	sciReceive(scilinREG, 1, (unsigned char *)&myCommand); // await next character
+
+//	bufferIndex ++;
+
+
+}

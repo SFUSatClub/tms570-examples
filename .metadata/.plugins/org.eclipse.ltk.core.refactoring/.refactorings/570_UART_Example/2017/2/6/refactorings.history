@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;570_UART_Example/source/SFU_Serial.cpp&apos; to &apos;SFU_Serial.c&apos;" description="Rename resource &apos;SFU_Serial.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="source/SFU_Serial.cpp" name="SFU_Serial.c" stamp="1486626173917" updateReferences="true"/>
+</session>

@@ -1,0 +1,143 @@
+
+**** Build of configuration Debug for project RTOS_Blinky ****
+
+"C:\\TI\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../source/dabort.asm'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/dabort.d" --obj_directory="source"  "../source/dabort.asm"
+'Finished building: ../source/dabort.asm'
+' '
+'Building file: ../source/esm.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/esm.d" --obj_directory="source"  "../source/esm.c"
+'Finished building: ../source/esm.c'
+' '
+'Building file: ../source/gio.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/gio.d" --obj_directory="source"  "../source/gio.c"
+'Finished building: ../source/gio.c'
+' '
+'Building file: ../source/notification.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/notification.d" --obj_directory="source"  "../source/notification.c"
+'Finished building: ../source/notification.c'
+' '
+'Building file: ../source/os_croutine.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/os_croutine.d" --obj_directory="source"  "../source/os_croutine.c"
+'Finished building: ../source/os_croutine.c'
+' '
+'Building file: ../source/os_event_groups.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/os_event_groups.d" --obj_directory="source"  "../source/os_event_groups.c"
+'Finished building: ../source/os_event_groups.c'
+' '
+'Building file: ../source/os_heap.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/os_heap.d" --obj_directory="source"  "../source/os_heap.c"
+'Finished building: ../source/os_heap.c'
+' '
+'Building file: ../source/os_list.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/os_list.d" --obj_directory="source"  "../source/os_list.c"
+'Finished building: ../source/os_list.c'
+' '
+'Building file: ../source/os_mpu_wrappers.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/os_mpu_wrappers.d" --obj_directory="source"  "../source/os_mpu_wrappers.c"
+'Finished building: ../source/os_mpu_wrappers.c'
+' '
+'Building file: ../source/os_port.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/os_port.d" --obj_directory="source"  "../source/os_port.c"
+'Finished building: ../source/os_port.c'
+' '
+'Building file: ../source/os_portasm.asm'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/os_portasm.d" --obj_directory="source"  "../source/os_portasm.asm"
+'Finished building: ../source/os_portasm.asm'
+' '
+'Building file: ../source/os_queue.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/os_queue.d" --obj_directory="source"  "../source/os_queue.c"
+'Finished building: ../source/os_queue.c'
+' '
+'Building file: ../source/os_tasks.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/os_tasks.d" --obj_directory="source"  "../source/os_tasks.c"
+'Finished building: ../source/os_tasks.c'
+' '
+'Building file: ../source/os_timer.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/os_timer.d" --obj_directory="source"  "../source/os_timer.c"
+'Finished building: ../source/os_timer.c'
+' '
+'Building file: ../source/pinmux.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/pinmux.d" --obj_directory="source"  "../source/pinmux.c"
+'Finished building: ../source/pinmux.c'
+' '
+'Building file: ../source/sys_core.asm'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/sys_core.d" --obj_directory="source"  "../source/sys_core.asm"
+'Finished building: ../source/sys_core.asm'
+' '
+'Building file: ../source/sys_intvecs.asm'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/sys_intvecs.d" --obj_directory="source"  "../source/sys_intvecs.asm"
+'Finished building: ../source/sys_intvecs.asm'
+' '
+'Building file: ../source/sys_main.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/sys_main.d" --obj_directory="source"  "../source/sys_main.c"
+"../source/sys_main.c", line 101: warning #112-D: statement is unreachable
+'Finished building: ../source/sys_main.c'
+' '
+'Building file: ../source/sys_mpu.asm'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/sys_mpu.d" --obj_directory="source"  "../source/sys_mpu.asm"
+'Finished building: ../source/sys_mpu.asm'
+' '
+'Building file: ../source/sys_pcr.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/sys_pcr.d" --obj_directory="source"  "../source/sys_pcr.c"
+'Finished building: ../source/sys_pcr.c'
+' '
+'Building file: ../source/sys_phantom.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/sys_phantom.d" --obj_directory="source"  "../source/sys_phantom.c"
+'Finished building: ../source/sys_phantom.c'
+' '
+'Building file: ../source/sys_pmu.asm'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/sys_pmu.d" --obj_directory="source"  "../source/sys_pmu.asm"
+'Finished building: ../source/sys_pmu.asm'
+' '
+'Building file: ../source/sys_selftest.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/sys_selftest.d" --obj_directory="source"  "../source/sys_selftest.c"
+'Finished building: ../source/sys_selftest.c'
+' '
+'Building file: ../source/sys_startup.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/sys_startup.d" --obj_directory="source"  "../source/sys_startup.c"
+'Finished building: ../source/sys_startup.c'
+' '
+'Building file: ../source/sys_vim.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/sys_vim.d" --obj_directory="source"  "../source/sys_vim.c"
+'Finished building: ../source/sys_vim.c'
+' '
+'Building file: ../source/system.c'
+'Invoking: ARM Compiler'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 --include_path="C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/Users/Richard Arthurs/workspace_v6_2/RTOS_Blinky/include" -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed --preproc_with_compile --preproc_dependency="source/system.d" --obj_directory="source"  "../source/system.c"
+'Finished building: ../source/system.c'
+' '
+'Building target: RTOS_Blinky.out'
+'Invoking: ARM Linker'
+"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7R4 --code_state=32 -g --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --enum_type=packed -z -m"RTOS_Blinky.map" --stack_size=0x800 --heap_size=0x800 -i"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/lib" -i"C:/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --reread_libs --diag_wrap=off --warn_sections --display_error_number --xml_link_info="RTOS_Blinky_linkInfo.xml" --rom_model --be32 -o "RTOS_Blinky.out" "./source/dabort.obj" "./source/esm.obj" "./source/gio.obj" "./source/notification.obj" "./source/os_croutine.obj" "./source/os_event_groups.obj" "./source/os_heap.obj" "./source/os_list.obj" "./source/os_mpu_wrappers.obj" "./source/os_port.obj" "./source/os_portasm.obj" "./source/os_queue.obj" "./source/os_tasks.obj" "./source/os_timer.obj" "./source/pinmux.obj" "./source/sys_core.obj" "./source/sys_intvecs.obj" "./source/sys_main.obj" "./source/sys_mpu.obj" "./source/sys_pcr.obj" "./source/sys_phantom.obj" "./source/sys_pmu.obj" "./source/sys_selftest.obj" "./source/sys_startup.obj" "./source/sys_vim.obj" "./source/system.obj" "../source/sys_link.cmd"  -llibc.a 
+<Linking>
+'Finished building target: RTOS_Blinky.out'
+' '
+
+**** Build Finished ****

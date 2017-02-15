@@ -1,0 +1,22 @@
+/*
+ * SFU_Serial.h
+ *
+ *  Created on: Feb 8, 2017
+ *      Author: Richard Arthurs
+ *
+ *      this header has the SCI communication drivers for the TMS570
+ */
+
+#ifndef SFUSAT_SFU_SERIAL_H_
+#define SFUSAT_SFU_SERIAL_H_
+
+#include "sci.h" // by HALcoGen
+
+static unsigned char myCommand;
+
+void serialInit();
+void serialSend(unsigned char*);
+void serialSendlnn(unsigned char*);
+
+
+#endif /* SFUSAT_SFU_SERIAL_H_ */
