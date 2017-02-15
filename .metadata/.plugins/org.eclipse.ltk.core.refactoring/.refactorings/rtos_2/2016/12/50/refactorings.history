@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;rtos_2/rtos_1.dil&apos; to &apos;rtos_2.dil&apos;" description="Rename resource &apos;rtos_1.dil&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="rtos_1.dil" name="rtos_2.dil" stamp="1481269173506" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;rtos_2/rtos_1.hcg&apos; to &apos;rtos_2.hcg&apos;" description="Rename resource &apos;rtos_1.hcg&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="rtos_1.hcg" name="rtos_2.hcg" stamp="1481269184156" updateReferences="true"/>
-</session>

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;570_blink_1&apos;" deleteContents="false" description="Delete resource &apos;570_blink_1&apos;" element1="/570_blink_1" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1484769425866"/>&#x0A;<refactoring comment="Delete resource &apos;570_blink_1/main.c&apos;" deleteContents="false" description="Delete resource &apos;570_blink_1/main.c&apos;" element1="/570_blink_1/main.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1484770082614"/>
-</session>
