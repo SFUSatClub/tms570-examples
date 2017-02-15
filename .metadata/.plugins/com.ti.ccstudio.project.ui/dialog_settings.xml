@@ -17,8 +17,8 @@
 			<item value="" key="CCS.DEVICE_ENDIANNESS"/>
 			<item value="" key="CCS.TOOL_CHAIN"/>
 			<item value="null" key="CCS.LINKER_COMMAND_FILE"/>
-			<item value="null" key="CCS.RUNTIME_SUPPORT_LIB"/>
 			<item value="executable" key="CCS.OUTPUT_TYPE"/>
+			<item value="null" key="CCS.RUNTIME_SUPPORT_LIB"/>
 			<item value="" key="CCS.OUTPUT_FORMAT"/>
 		</section>
 	</section>
