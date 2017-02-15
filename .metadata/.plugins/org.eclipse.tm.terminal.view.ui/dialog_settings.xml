@@ -8,8 +8,8 @@
 				<item value="None" key="SerialLinePanel.selectedTTYParity.Windows 7"/>
 				<item value="None" key="SerialLinePanel.selectedTTYFlowControl.Windows 7"/>
 				<item value="5" key="SerialLinePanel.selectedTTYTimeout.Windows 7"/>
-				<item value="8" key="SerialLinePanel.selectedTTYDatabits.Windows 7"/>
 				<item value="COM14" key="SerialLinePanel.selectedTTYDevice.Windows 7"/>
+				<item value="8" key="SerialLinePanel.selectedTTYDatabits.Windows 7"/>
 				<item value="2" key="SerialLinePanel.selectedTTYStopbits.Windows 7"/>
 			</section>
 			<section name="Local Terminal">
