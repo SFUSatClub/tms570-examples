@@ -14,6 +14,7 @@
 
 #include "sci.h" // by HALcoGen
 
+
 static unsigned char myCommand;
 static char inputBuffer[10]; // 10 character input buffer
 static int bufferIndex = 0;
@@ -22,6 +23,7 @@ void serialInit();
 void serialSend(unsigned char*);
 void serialSendln(char*);
 void echoInputBuffer(void);
+
 
 
 #endif /* SFUSAT_SFU_SERIAL_H_ */
