@@ -94,7 +94,7 @@ int main(void)
                  1, /* This task will run at priority 1. */
                  NULL ); /* This example does not use the task handle. */
 
-    xQueue = xQueueCreate( 5, sizeof( int32_t ) );
+    xQueue = xQueueCreate( 5, sizeof( char * ) );
     if( xQueue != NULL )
     {
         /* Create two instances of the task that will send to the queue. The task
@@ -102,8 +102,8 @@ int main(void)
     so one task will continuously write 100 to the queue while the other task
     will continuously write 200 to the queue. Both tasks are created at
     priority 1. */
-        xTaskCreate( vSenderTask, "Sender1", configMINIMAL_STACK_SIZE, ( void * ) 100, 1, NULL );
-        xTaskCreate( vSenderTask, "Sender2", configMINIMAL_STACK_SIZE, ( void * ) 200, 1, NULL );
+        xTaskCreate( vSenderTask, "Sender1", configMINIMAL_STACK_SIZE, ( void * )  "Sender 1", 1, NULL );
+        xTaskCreate( vSenderTask, "Sender2", configMINIMAL_STACK_SIZE, ( void * ) "Sender 2", 1, NULL );
         /* Create the task that will read from the queue. The task is created with
     priority 2, so above the priority of the sender tasks. */
         xTaskCreate( vReceiverTask, "Receiver", configMINIMAL_STACK_SIZE, NULL, 2, NULL );

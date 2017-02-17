@@ -16,13 +16,13 @@ void vTask2(void *pvParameters){
 
 void vSenderTask( void *pvParameters )
 {
-    int32_t lValueToSend;
+    char * toSend;
     BaseType_t xStatus;
     /* Two instances of this task are created so the value that is sent to the
  queue is passed in via the task parameter - this way each instance can use
  a different value. The queue was created to hold values of type int32_t,
  so cast the parameter to the required type. */
-    lValueToSend = ( int32_t ) pvParameters;
+    toSend = (char*)pvParameters;
     /* As per most tasks, this task is implemented within an infinite loop. */
     for( ;; )
     {
@@ -37,7 +37,7 @@ void vSenderTask( void *pvParameters )
  should the queue already be full. In this case a block time is not
  specified because the queue should never contain more than one item, and
  therefore never be full. */
-        xStatus = xQueueSendToBack( xQueue, &lValueToSend, 0 );
+        xStatus = xQueueSendToBack( xQueue, &toSend, 0 );
         if( xStatus != pdPASS )
         {
             /* The send operation could not complete because the queue was full -
@@ -52,7 +52,7 @@ void vSenderTask( void *pvParameters )
 void vReceiverTask( void *pvParameters )
 {
     /* Declare the variable that will hold the values received from the queue. */
-    int32_t lReceivedValue;
+    char * receivedVal;
     BaseType_t xStatus;
     const TickType_t xTicksToWait = pdMS_TO_TICKS( 100 );
     /* This task is also defined within an infinite loop. */
@@ -74,12 +74,12 @@ void vReceiverTask( void *pvParameters )
  The last parameter is the block time – the maximum amount of time that the
  task will remain in the Blocked state to wait for data to be available
  should the queue already be empty. */
-        xStatus = xQueueReceive( xQueue, &lReceivedValue, xTicksToWait );
+        xStatus = xQueueReceive( xQueue, &receivedVal, xTicksToWait );
         if( xStatus == pdPASS )
         {
             /* Data was successfully received from the queue, print out the received
  value. */
-            serialSendln( "Received = " );
+            serialSendln( (char *)receivedVal );
         }
         else
         {
