@@ -55,6 +55,7 @@
 #include "os_task.h"
 #include "gio.h"
 #include "SFU_Serial.h"
+#include "SFU_SPI.h"
 
 // Define task handles
 xTaskHandle xTask1Handle;
@@ -66,6 +67,26 @@ void vTask1(void *pvParameters){
 	        gioSetBit(gioPORTA, 2, gioGetBit(gioPORTA, 2) ^ 1); // blinky 10Hz
 	        vTaskDelay(100);
 	    }
+}
+void vButtonTask(void *pvParameters) {
+    for(;;) {
+        int pressed = gioGetBit(gioPORTA, 7);
+        if(pressed == 1) {
+            serialSendln("pressed");
+            uint16 sample[4] = { 0xFF, 0x01, 0x02, 0x11 };
+            //spi_transmit(4, sample);
+            int i;
+            for(i = 0; i < 32; i++) {
+                sample[0] = i;
+                sample[0] |= (i+1) << 8;
+                spi_transmit(1, &sample[0]);
+            }
+        } else {
+            //serialSendln("not pressed");
+        }
+
+        vTaskDelay(200);
+    }
 }
 void UART_Task(void *pvParameters){
 	  for(;;)
@@ -94,9 +115,15 @@ int main(void)
 /* USER CODE BEGIN (3) */
 	_enable_IRQ(); // global interrupt enable
 	serialInit(); // SFU Serial
+	spi_init();
+	spi_transmit_text("spi send test");
 
 	serialSendln("SFU Satellite Design Team");
 	serialSendln("hello!");
+
+	uint16 sample[4] = { 0x00, 0x01, 0x02, 0x04 };
+
+	spi_transmit(4, sample);
 
 	gioInit();
 
@@ -109,6 +136,13 @@ int main(void)
 		else{
 			serialSendln("Created task 1");
 		}
+        if (xTaskCreate(vButtonTask,"Button", configMINIMAL_STACK_SIZE, NULL, 1, &xTask1Handle) != pdTRUE){
+            /* Task could not be created */
+            serialSendln("Couldn't Create Button Task");
+            while(1);
+        } else {
+            serialSendln("Created Button Task");
+        }
 		if (xTaskCreate(UART_Task,"UART_Task", configMINIMAL_STACK_SIZE, NULL, 1, &xUARTTaskHandle) != pdTRUE){
 					/* Task could not be created */
 			serialSendln("Couldn't Create UART Task");
