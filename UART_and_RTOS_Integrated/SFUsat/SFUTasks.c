@@ -14,6 +14,22 @@ void vTask2(void *pvParameters){
     }
 }
 
+
+void periodicSenderTask(void *pvParameters){
+    while(1){
+        uint16_t delayInput;
+        delayInput = (uint32_t) pvParameters;
+        if(delayInput > 4000){
+            xTaskCreate( vSenderTask, "Infreq", configMINIMAL_STACK_SIZE, ( void * )  "INFREQUENT Task", 1,  NULL);
+        }
+        else{
+            xTaskCreate( vSenderTask, "Sender1", configMINIMAL_STACK_SIZE, ( void * )  "Sender Task", 1,  NULL);
+        }
+        vTaskDelay(pdMS_TO_TICKS( delayInput)); // delay a certain time. Use the macro
+
+    }
+}
+
 void vSenderTask( void *pvParameters )
 {
     char * toSend;
@@ -45,6 +61,7 @@ void vSenderTask( void *pvParameters )
  one item! */
             serialSendln( "Could not send to the queue." );
         }
+        vTaskDelete( NULL );
     }
 }
 
@@ -81,12 +98,12 @@ void vReceiverTask( void *pvParameters )
  value. */
             serialSendln( (char *)receivedVal );
         }
-        else
-        {
-            /* Data was not received from the queue even after waiting for 100ms.
- This must be an error as the sending tasks are free running and will be
- continuously writing to the queue. */
-            serialSendln( "Could not receive from the queue." );
-        }
+//        else // CAN REMOVE THIS BECAUSE THE QUEUE WILL FREQUENTLY BE EMPTY SINCE IT ONLY GETS SENT EVERY SECOND
+//        {
+//            /* Data was not received from the queue even after waiting for 100ms.
+// This must be an error as the sending tasks are free running and will be
+// continuously writing to the queue. */
+//            serialSendln( "Could not receive from the queue." );
+//        }
     }
 }

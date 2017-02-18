@@ -102,8 +102,10 @@ int main(void)
     so one task will continuously write 100 to the queue while the other task
     will continuously write 200 to the queue. Both tasks are created at
     priority 1. */
-        xTaskCreate( vSenderTask, "Sender1", configMINIMAL_STACK_SIZE, ( void * )  "Sender 1", 1, NULL );
-        xTaskCreate( vSenderTask, "Sender2", configMINIMAL_STACK_SIZE, ( void * ) "Sender 2", 1, NULL );
+
+        xTaskCreate(periodicSenderTask, "Periodic Sending Task", configMINIMAL_STACK_SIZE, ( void * )  1000, 1, NULL);
+        xTaskCreate(periodicSenderTask, "INFREQUENT Sending Task", configMINIMAL_STACK_SIZE, ( void * )  5000, 1, NULL);
+
         /* Create the task that will read from the queue. The task is created with
     priority 2, so above the priority of the sender tasks. */
         xTaskCreate( vReceiverTask, "Receiver", configMINIMAL_STACK_SIZE, NULL, 2, NULL );

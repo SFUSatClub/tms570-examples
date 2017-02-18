@@ -15,7 +15,7 @@
 #include "SFU_Serial.h"
 
 QueueHandle_t xQueue;
-
+//xTaskHandle vSenderHandle; // task handle for the sender which we can use to delete it
 
 void hundredBlinky(void *pvParameters);
 void vTask2(void *pvParameters);
@@ -23,6 +23,7 @@ void vTask2(void *pvParameters);
 // RTOS queue example
 void vSenderTask( void *pvParameters );
 void vReceiverTask( void *pvParameters );
+void periodicSenderTask( void *pvParameters );
 
 
 #endif /* SFUSAT_SFUTASKS_H_ */
