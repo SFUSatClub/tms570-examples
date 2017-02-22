@@ -45,16 +45,7 @@ void sciNotification(sciBASE_t *sci, unsigned flags){ // this is the interrupt h
 			bufferIndex ++;
 
 			if (bufferIndex > 9){ // reset the buffer
-				//serialSend("\r\n");
-			//	echoInputBuffer(); // print out the entire buffer
-
-// For some reason, this works fine, but echoInputBuffer always prints a couple garbage characters....
-				int i;
-				char sendChar;
-				for (i = 0; i < sizeof(inputBuffer); i++){
-					sendChar = inputBuffer[i];
-					serialSendln(&sendChar);
-				}
+				echoInputBuffer(); // print out the entire buffer
 
 				bufferIndex = 0; // reset our index
 				serialSendln("\r\nBuffer full");

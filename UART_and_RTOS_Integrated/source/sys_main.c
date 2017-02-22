@@ -99,9 +99,8 @@ int main(void)
     {
         /* Create two instances of the task that will send to the queue. The task
     parameter is used to pass the value that the task will write to the queue,
-    so one task will continuously write 100 to the queue while the other task
-    will continuously write 200 to the queue. Both tasks are created at
-    priority 1. */
+   In this case, a string (character pointer) will be passed to the queue.
+   */
 
         xTaskCreate(periodicSenderTask, "Periodic Sending Task", configMINIMAL_STACK_SIZE, ( void * )  1000, 1, NULL);
         xTaskCreate(periodicSenderTask, "INFREQUENT Sending Task", configMINIMAL_STACK_SIZE, ( void * )  5000, 1, NULL);

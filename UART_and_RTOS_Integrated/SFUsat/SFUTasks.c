@@ -1,7 +1,7 @@
 #include "SFUTasks.h"
 
 
-void hundredBlinky(void *pvParameters){
+void hundredBlinky(void *pvParameters){ // this is the sanity checker task, blinks LED at 10Hz
     while(1){
         gioSetBit(gioPORTA, 2, gioGetBit(gioPORTA, 2) ^ 1);   // Toggles the A2 bit
         vTaskDelay(pdMS_TO_TICKS( 100 )); // delay 100ms. Use the macro
@@ -15,7 +15,7 @@ void vTask2(void *pvParameters){
 }
 
 
-void periodicSenderTask(void *pvParameters){
+void periodicSenderTask(void *pvParameters){ // uses the task parameter to delay itself at a different frequency. Creates UART sender tasks to send whether it was a frequent or infrequent call.
     while(1){
         uint16_t delayInput;
         delayInput = (uint32_t) pvParameters;
@@ -26,11 +26,10 @@ void periodicSenderTask(void *pvParameters){
             xTaskCreate( vSenderTask, "Sender1", configMINIMAL_STACK_SIZE, ( void * )  "Sender Task", 1,  NULL);
         }
         vTaskDelay(pdMS_TO_TICKS( delayInput)); // delay a certain time. Use the macro
-
     }
 }
 
-void vSenderTask( void *pvParameters )
+void vSenderTask( void *pvParameters ) // sends stuff to the UART
 {
     char * toSend;
     BaseType_t xStatus;
@@ -61,12 +60,12 @@ void vSenderTask( void *pvParameters )
  one item! */
             serialSendln( "Could not send to the queue." );
         }
-        vTaskDelete( NULL );
+        vTaskDelete( NULL );  // once complete, delete the current instance of the task.
     }
 }
 
 
-void vReceiverTask( void *pvParameters )
+void vReceiverTask( void *pvParameters ) // gets called whenever a new value is placed in the queue (the transmit queue for the UART). Uses existing non-RTOS save UART driver to send queue values out.
 {
     /* Declare the variable that will hold the values received from the queue. */
     char * receivedVal;
