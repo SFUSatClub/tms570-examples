@@ -15,7 +15,7 @@
 void serialInit(){
 	sciInit(); //initialize the SCI driver
 	bufferIndex = 0;
-	sciReceive(scilinREG, 1, (unsigned char *)&myCommand); // place into receive mode
+	sciReceive(scilinREG, 1, (unsigned char *)&currChar); // place into receive mode
 }
 
 void serialSend(unsigned char* myStr){ // simple, just sends what's given to it with no /r/n
@@ -34,12 +34,12 @@ void serialSendln(char* stringToSend){
 
 	free(extended);
 
-	sciReceive(scilinREG, 1, (unsigned char *)&myCommand);
+	sciReceive(scilinREG, 1, (unsigned char *)&currChar);
 }
 
 void sciNotification(sciBASE_t *sci, unsigned flags){ // this is the interrupt handler callback
 	if (flags == 0x200){ // if it's a receive interrupt. 0x100 is a transmit interrupt
-		inputBuffer[bufferIndex] = myCommand;
+		inputBuffer[bufferIndex] = currChar;
 
 		//	sciSend(scilinREG, 1, (unsigned char *)&inputBuffer[bufferIndex]); // echo received character
 			bufferIndex ++;
@@ -60,7 +60,7 @@ void sciNotification(sciBASE_t *sci, unsigned flags){ // this is the interrupt h
 				serialSendln("\r\nBuffer full");
 			}
 
-			sciReceive(scilinREG, 1, (unsigned char *)&myCommand); // go back into receive mode
+			sciReceive(scilinREG, 1, (unsigned char *)&currChar); // go back into receive mode
 	}
 }
 
